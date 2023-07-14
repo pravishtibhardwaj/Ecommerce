@@ -27,8 +27,8 @@ app.use(express.static(path.join(__dirname, "./client/build ")));
 // app.use("/api/v1/category", categoryRoute);
 // app.use("/api/v1/product", productRoute);
 
-app.use("auth", authRoute);
-app.use("category", categoryRoute);
+app.use("/auth", authRoute);
+app.use("/category", categoryRoute);
 app.use("/product", productRoute);
 //rest api
 
