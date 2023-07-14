@@ -23,9 +23,13 @@ app.use(morgan("dev"));
 app.use(express.static(path.join(__dirname, "./client/build ")));
 
 //routes
-app.use("/api/v1/auth", authRoute);
-app.use("/api/v1/category", categoryRoute);
-app.use("/api/v1/product", productRoute);
+// app.use("/api/v1/auth", authRoute);
+// app.use("/api/v1/category", categoryRoute);
+// app.use("/api/v1/product", productRoute);
+
+app.use("auth", authRoute);
+app.use("category", categoryRoute);
+app.use("/product", productRoute);
 //rest api
 
 // app.use("*", function (req, res) {
