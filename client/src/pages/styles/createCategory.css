@@ -1,0 +1,60 @@
+.addCat {
+  margin: 20px;
+}
+.showCat {
+  padding: 10px;
+  min-width: 50vw;
+}
+.content-head {
+  width: 90%;
+  min-width: 40%;
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content-cat {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 30px;
+  align-items: center;
+  background-color: aliceblue;
+}
+
+.addCat input {
+  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.265);
+}
+input:focus {
+  outline: none;
+  border: none;
+  border-bottom: black;
+}
+.pagination {
+  /* margin: 60px; */
+  --bs-pagination-color: #1d5e89;
+  --bs-pagination-hover-color: var(--bs-pagination-color);
+  --bs-pagination-active-bg: var(--bs-pagination-color);
+  --bs-pagination-active-border-color: var(--bs-pagination-color);
+  --bs-pagination-focus-box-shadow: none;
+  --bs-pagination-disabled-bg: rgba(237, 237, 237, 0.89);
+}
+.page-link > a {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 25px;
+}
+.page-link {
+  font-size: 13px;
+  font-weight: 500;
+  margin: 2px;
+  border-radius: 25px;
+}
+.disabled > a {
+  color: rgb(188, 185, 185);
+}
+.active-s {
+  background-color: rgb(46, 103, 153);
+  color: white;
+}

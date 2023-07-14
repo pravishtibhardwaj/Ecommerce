@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+}
+.add-to-cart {
+  margin-left: 70px;
+  font-size: 14px;
+  border: 2px solid rgb(17, 76, 165);
+  border-radius: 4px;
+  padding: 2px;
+  background-color: rgb(17, 76, 165);
+  font-weight: 500;
+  color: white;
+}
+.add-to-cart:hover {
+  cursor: pointer;
+  color: rgb(17, 76, 165);
+  background-color: white;
+  transition: 0.1s;
+}

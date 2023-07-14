@@ -1,0 +1,68 @@
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.side-content {
+  display: flex;
+  flex-direction: column;
+
+  max-width: 32vw;
+  /* min-width: 35vw; */
+  /* min-height: 80vh; */
+  margin: 20px;
+}
+.upper-part {
+  /* margin: 30px; */
+  background-color: rgba(148, 213, 239, 0.562);
+  padding: 40px;
+  font-family: "Poppins", sans-serif;
+  /* height: 50vh; */
+}
+
+.lower-part img {
+  /* padding: 30px; */
+  height: 37vh;
+  width: 34vw;
+}
+.register {
+  margin: 50px;
+}
+
+.register form {
+  min-width: 30vw;
+  margin: 10px;
+  font-family: "Poppins", sans-serif;
+}
+.register input {
+  border: 1px solid rgba(0, 0, 0, 0.502);
+  padding: 5px;
+}
+.btn {
+  background-color: rgb(214, 165, 4);
+  border: 2px solid rgb(214, 165, 4);
+}
+.btn:hover {
+  background-color: rgba(214, 165, 4, 0.546);
+  border: 2px solid rgba(214, 165, 4, 0.546);
+}
+.login-upper-part {
+  display: none;
+}
+@media screen and (max-width: 800px) {
+  .side-content {
+    display: none;
+  }
+  .register {
+    background-image: url("../../assets/signupimg.jpg");
+    background-size: 49vw 42vw;
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+  .login {
+    background-size: 29vw 30vw;
+    background-position: 150px 98px;
+  }
+}

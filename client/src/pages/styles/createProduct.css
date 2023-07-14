@@ -1,0 +1,101 @@
+* {
+  box-sizing: inherit;
+  font-family: "Oxygen", sans-serif;
+}
+.product-input {
+  min-width: 30vw;
+  max-width: 35vw;
+}
+.product-input > input,
+.product-input > textarea {
+  border: 2px solid black;
+}
+.product-input ::placeholder {
+  color: rgb(153, 152, 152);
+}
+.product-photo {
+  min-width: 35vw;
+  max-width: 30vw;
+}
+
+/* //All products display css */
+
+.Product-card {
+  background-color: white;
+}
+.Product-card:hover {
+  box-shadow: 2px 2px 12px 2px rgba(0, 0, 0, 0.253);
+  transition: 0.3s;
+  transition-timing-function: ease-out;
+  .card-img-home {
+    height: 12vw;
+    transition: 0.3s;
+    transition-timing-function: 0.3s ease-out;
+  }
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  --bs-card-border-color: white;
+  --bs-card-spacer-y: 0rem;
+  --bs-card-spacer-x: 0.5rem;
+  --bs-card-title-spacer-y: 0rem;
+}
+
+.main-admin-product {
+  height: fit-content;
+  max-height: fit-content;
+}
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  transition: 0.5s ease;
+  opacity: 0;
+  color: white;
+  font-size: 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.update-product,
+.delete-product {
+  padding: 3px;
+  margin-right: 3px;
+
+  border: 2px solid rgb(24, 80, 183);
+  border-radius: 10px;
+  background-color: rgb(24, 80, 183);
+  color: white;
+}
+.delete-product {
+  border: 2px solid rgb(180, 82, 82);
+  background-color: rgb(180, 82, 82);
+}
+.Product-card:hover .actions {
+  opacity: 1;
+}
+.product-img {
+  margin: 20px;
+  width: 40vw;
+  max-width: 40vw;
+  /* position: sticky; */
+}
+.product-img .img {
+  border: 1px solid black;
+  width: 40vw;
+  height: 70vh;
+  min-height: 70vh;
+  max-height: 30vh;
+  max-width: 40vw;
+}
+.details {
+  position: relative;
+  padding: 50px;
+}

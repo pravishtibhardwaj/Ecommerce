@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Marcellus&family=Mate:ital@0;1&family=Noto+Serif:wght@700&family=Oxygen&family=Poppins:ital,wght@0,400;1,300&family=Ubuntu:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* font-family: 'Marcellus', serif;
+font-family: 'Mate', serif;
+font-family: 'Noto Serif', serif;
+font-family: 'Oxygen', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Ubuntu', sans-serif;*/
+
+.navbar {
+  font-family: "Poppins", sans-serif;
+  height: 40px;
+  min-height: 40px;
+  box-shadow: 0 8px 8px -6px grey;
+}
+.navbar-b {
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(3, 69, 83);
+  font-family: "Noto Serif", serif;
+}
+.navbar-s {
+  font-size: 10px;
+  color: rgb(123, 168, 180);
+  font-family: "Poppins", sans-serif;
+}
+.nav-link {
+  font-size: 15px;
+  font-weight: bold;
+  margin-right: 24px;
+  padding: 2px;
+}
+.nav-item {
+  padding-right: 20px;
+}
+.active {
+  color: grey;
+}
+.nav-link:hover {
+  color: grey;
+}
+
+.footer {
+  font-family: "Poppins", sans-serif;
+  background-color: rgba(10, 131, 158, 0.776);
+  margin-bottom: 0;
+
+  padding: 25px;
+  color: white;
+}
+.footer a {
+  text-decoration: none;
+  color: white;
+  padding: 4px;
+}
+.footer a:hover {
+  color: beige;
+}
+.pnf-content {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  font-weight: 700;
+  margin-top: 80px;
+  font-size: 100px;
+}
+
+.pnf-btn {
+  border: 2px solid black;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 6px;
+}
+.pnf-btn:hover {
+  background-color: rgba(0, 0, 0, 0.829);
+  color: white;
+}
+.footer .grid {
+  justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+}
+.footer .grid-item {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.footnote {
+  text-align: center;
+  padding: 5px;
+  font-size: 13px;
+  background-color: rgb(10, 131, 158);
+  color: white;
+}
+
+/* .register form {
+  padding: 20px;
+  box-shadow: 0px 0px 20px 2px rgba(128, 128, 128, 0.463);
+} */
