@@ -21,7 +21,9 @@ const AllProducts = () => {
 
   const getAllProducts = async () => {
     try {
-      const { data } = await axios.get("/api/v1/product/get-products");
+      const { data } = await axios.get(
+        `${process.env.REACT_APP_API}/api/v1/product/get-products`
+      );
       if (data?.success) {
         setProducts(data.products);
       }
@@ -44,7 +46,9 @@ const AllProducts = () => {
         "Are you sure you want to delete this product? "
       );
       if (!answer) return;
-      const res = await axios.delete(`/api/v1/product/delete-product/${id}`);
+      const res = await axios.delete(
+        `${process.env.REACT_APP_API}/api/v1/product/delete-product/${id}`
+      );
       if (res.data.success) {
         // <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
         //   <Alert
@@ -88,7 +92,7 @@ const AllProducts = () => {
                 }}
               >
                 <img
-                  src={`/api/v1/product/product-photo/${p._id}`}
+                  src={`${process.env.REACT_APP_API}/api/v1/product/product-photo/${p._id}`}
                   className="card-img-top card-img"
                   alt={p.name}
                   style={{ minHeight: "17vw" }}

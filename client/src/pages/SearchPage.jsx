@@ -25,7 +25,7 @@ const SearchPage = () => {
               }}
             >
               <img
-                src={`/api/v1/product/product-photo/${p._id}`}
+                src={`${process.env.REACT_APP_API}/api/v1/product/product-photo/${p._id}`}
                 className="card-img-top card-img"
                 alt={p.name}
               />

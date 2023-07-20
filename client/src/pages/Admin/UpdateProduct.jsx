@@ -24,7 +24,7 @@ const UpdateProduct = () => {
   const getSingleProduct = async () => {
     try {
       const { data } = await axios.get(
-        `/api/v1/product/get-products/${params.slug}`
+        `${process.env.REACT_APP_API}/api/v1/product/get-products/${params.slug}`
       );
       // console.log(data.product);
       if (data.success) {
@@ -51,7 +51,9 @@ const UpdateProduct = () => {
   }, []);
   const getAllCategories = async () => {
     try {
-      const { data } = await axios.get("/api/v1/category/get-category");
+      const { data } = await axios.get(
+        `${process.env.REACT_APP_API}/api/v1/category/get-category`
+      );
       if (data?.success) {
         setCategories(data?.category);
       }
@@ -77,7 +79,7 @@ const UpdateProduct = () => {
       productData.append("shipping", shipping);
 
       const { data } = await axios.put(
-        `/api/v1/product/update-product/${id}`,
+        `${process.env.REACT_APP_API}/api/v1/product/update-product/${id}`,
         productData
       );
       if (data?.success) {
@@ -147,7 +149,7 @@ const UpdateProduct = () => {
               ) : (
                 <div className="text-center ">
                   <img
-                    src={`/api/v1/product/product-photo/${id}`}
+                    src={`${process.env.REACT_APP_API}/api/v1/product/product-photo/${id}`}
                     alt="product photo"
                     height={"50px"}
                     width={"50px"}

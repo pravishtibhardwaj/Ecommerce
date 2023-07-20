@@ -16,7 +16,7 @@ const ProductDetails = () => {
   const params = useParams();
   const getSingleProduct = async () => {
     const { data } = await axios.get(
-      `/api/v1/product/get-products/${params.slug}`
+      `${process.env.REACT_APP_API}/api/v1/product/get-products/${params.slug}`
     );
     setProduct(data.product);
     getRelatedProducts(data?.product._id, data?.product.category._id);
@@ -29,7 +29,7 @@ const ProductDetails = () => {
   const getRelatedProducts = async (pid, cid) => {
     try {
       const { data } = await axios.get(
-        `/api/v1/product/related-products/${pid}/${cid}`
+        `${process.env.REACT_APP_API}/api/v1/product/related-products/${pid}/${cid}`
       );
       // console.log(data.relatedProducts);
       if (data?.success) setRelated(data.relatedProducts);
@@ -68,7 +68,7 @@ const ProductDetails = () => {
             }}
           >
             <img
-              src={`/api/v1/product/product-photo/${product._id}`}
+              src={`${process.env.REACT_APP_API}/api/v1/product/product-photo/${product._id}`}
               className="card-img-top card-img"
               alt={product.name}
               style={{ minHeight: "25vw" }}
@@ -155,7 +155,7 @@ const ProductDetails = () => {
                     }}
                   >
                     <img
-                      src={`/api/v1/product/product-photo/${p._id}`}
+                      src={`${process.env.REACT_APP_API}/api/v1/product/product-photo/${p._id}`}
                       className="card-img-top card-img"
                       alt={p.name}
                     />

@@ -34,7 +34,9 @@ const HomePage = () => {
   const getAllProducts = async () => {
     try {
       setLoading(true);
-      const { data } = await axios.get(`/api/v1/product/product-list/${page}`);
+      const { data } = await axios.get(
+        `${process.env.REACT_APP_API}/api/v1/product/product-list/${page}`
+      );
       setLoading(false);
       if (data?.success) {
         setProducts(data.perPageProducts);
@@ -47,7 +49,9 @@ const HomePage = () => {
   };
   const getAllCategories = async () => {
     try {
-      const { data } = await axios.get("/api/v1/category/get-category");
+      const { data } = await axios.get(
+        `${process.env.REACT_APP_API}/api/v1/category/get-category`
+      );
       if (data?.success) {
         setCategories(data?.category);
       }
@@ -74,10 +78,13 @@ const HomePage = () => {
 
   const getFilteredproducts = async () => {
     try {
-      const res = await axios.post("/api/v1/product/product-filter", {
-        checked,
-        radio,
-      });
+      const res = await axios.post(
+        `${process.env.REACT_APP_API}/api/v1/product/product-filter`,
+        {
+          checked,
+          radio,
+        }
+      );
       if (res?.data?.success) {
         // console.log(res.data);
         if (res.data.filteredProducts) setProducts(res.data.filteredProducts);
@@ -93,7 +100,9 @@ const HomePage = () => {
   //load more functionality
   const getTotal = async () => {
     try {
-      const { data } = await axios.get("/api/v1/product/product-count");
+      const { data } = await axios.get(
+        `${process.env.REACT_APP_API}/api/v1/product/product-count`
+      );
       if (data.success) setTotal(data.total);
     } catch (err) {
       console.log(err);
@@ -106,7 +115,9 @@ const HomePage = () => {
   const LoadMore = async () => {
     try {
       setLoading(true);
-      const { data } = await axios.get(`/api/v1/product/product-list/${page}`);
+      const { data } = await axios.get(
+        `${process.env.REACT_APP_API}/api/v1/product/product-list/${page}`
+      );
       setLoading(false);
       const perPageProductList = [...products, ...data.perPageProducts];
       if (data?.success) setProducts(perPageProductList);
@@ -341,7 +352,7 @@ const HomePage = () => {
                         className="card-img-home"
                         component="img"
                         height="194"
-                        image={`/api/v1/product/product-photo/${p._id}`}
+                        image={`${process.env.REACT_APP_API}/api/v1/product/product-photo/${p._id}`}
                         alt={p.name}
                       />
                     </Link>

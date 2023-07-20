@@ -51,7 +51,9 @@ const Cart = () => {
   };
 
   const getToken = async () => {
-    const res = await axios.get("/api/v1/product/braintree/token");
+    const res = await axios.get(
+      `${process.env.REACT_APP_API}/api/v1/product/braintree/token`
+    );
     setClientToken(res.data?.clientToken);
   };
   useEffect(() => {
@@ -62,10 +64,13 @@ const Cart = () => {
     try {
       setLoading(true);
       const { nonce } = await instance.requestPaymentMethod();
-      const { data } = await axios.post("/api/v1/product/braintree/payment", {
-        nonce,
-        cart,
-      });
+      const { data } = await axios.post(
+        `${process.env.REACT_APP_API}/api/v1/product/braintree/payment`,
+        {
+          nonce,
+          cart,
+        }
+      );
       setLoading(false);
       localStorage.removeItem(`cart_${auth?.user?._id}`);
       setCart([]);
@@ -102,7 +107,9 @@ const Cart = () => {
                   style={{ textDecoration: "none" }}
                 >
                   <div className="cart-img">
-                    <img src={`/api/v1/product/product-photo/${p._id}`} />
+                    <img
+                      src={`${process.env.REACT_APP_API}/api/v1/product/product-photo/${p._id}`}
+                    />
                   </div>
                 </Link>
                 <div className="cart-details">
